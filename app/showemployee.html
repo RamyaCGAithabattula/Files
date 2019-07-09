@@ -1,0 +1,40 @@
+<table>
+    <tr>
+        <td>Employee Id</td>
+        <td><input type="text" [(ngModel)]="empId"></td>
+    </tr>
+    <tr>
+        <td>Employee Name</td>
+        <td><input type="text" [(ngModel)]="empName"></td>
+    </tr>
+    <tr>
+        <td>Employee Salary</td>
+        <td><input type="text" [(ngModel)]="empSalary"></td>
+    </tr>
+    <tr>
+        <td>Employee Dept</td>
+        <td><input type="text" [(ngModel)]="empDept"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="ADD" (click)="addEmp()"></td>
+    </tr>
+</table>
+
+
+<table border="1">
+ <tr>
+     <th>Employee Id</th>
+     <th>Employee Name</th>
+     <th>Employee Salary</th>
+     <th>Employee Department</th>
+ </tr>
+ <tr *ngFor="let data of emparr;let i=index">
+
+    <td>{{data.empId}}</td>
+    <td>{{data.empName}}</td>
+    <td>{{data.empSalary}}</td>
+    <td>{{data.empDepartment}}</td>
+    <input type="button" value="Delete" (click)="empDelete()">
+ </tr>
+ 
+</table>
